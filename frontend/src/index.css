@@ -1,0 +1,246 @@
+:root {
+  --text: #5a5048;
+  --text-h: #1a1410;
+  --bg: #f7f2e9;
+  --border: #ddd5c8;
+  --code-bg: #eee9df;
+  --accent: #c2390c;
+  --accent-bg: rgba(194, 57, 12, 0.09);
+  --accent-border: rgba(194, 57, 12, 0.4);
+  --social-bg: rgba(238, 233, 223, 0.6);
+  --shadow:
+    rgba(43, 38, 32, 0.1) 0 10px 15px -3px,
+    rgba(43, 38, 32, 0.05) 0 4px 6px -2px;
+
+  --sans: 'DM Sans', system-ui, 'Segoe UI', sans-serif;
+  --heading: 'Playfair Display', Georgia, serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  /* ── Theme tokens (light = default) ── */
+  --theme-bg:           #f7f2e9;
+  --theme-bg-alt:       #faf6ee;
+  --theme-card:         rgba(255, 255, 255, 0.85);
+  --theme-card-strong:  rgba(255, 255, 255, 1);
+  --theme-border:       rgba(43, 38, 32, 0.1);
+  --theme-border-mid:   rgba(43, 38, 32, 0.16);
+  --theme-text:         #2b2620;
+  --theme-text-muted:   rgba(43, 38, 32, 0.6);
+  --theme-text-faint:   rgba(43, 38, 32, 0.38);
+  --theme-accent:       #c2390c;
+  --theme-accent-2:     #1d63c4;
+  --theme-success:      #0d7a5f;
+  --theme-grid:         rgba(43, 38, 32, 0.045);
+  --theme-glow:         rgba(29, 99, 196, 0.1);
+
+  /* Scroll-top btn uses these */
+  --scroll-btn-bg:      rgba(247, 242, 233, 0.9);
+  --scroll-btn-hover:   rgba(194, 57, 12, 0.1);
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.16px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+/* ── Optional dark override (keep only if you need dark mode elsewhere) ── */
+[data-theme="dark"] {
+  --theme-bg:           #0a0f1a;
+  --theme-bg-alt:       #0d1220;
+  --theme-card:         rgba(255, 255, 255, 0.03);
+  --theme-card-strong:  rgba(255, 255, 255, 0.06);
+  --theme-border:       rgba(255, 255, 255, 0.08);
+  --theme-border-mid:   rgba(255, 255, 255, 0.13);
+  --theme-text:         #e8e4d9;
+  --theme-text-muted:   rgba(232, 228, 217, 0.65);
+  --theme-text-faint:   rgba(232, 228, 217, 0.35);
+  --theme-accent:       #ff3c00;
+  --theme-accent-2:     #0078dc;
+  --theme-success:      #059669;
+  --theme-grid:         rgba(255, 60, 0, 0.06);
+  --theme-glow:         rgba(0, 120, 220, 0.18);
+  --scroll-btn-bg:      rgba(8, 12, 23, 0.85);
+  --scroll-btn-hover:   rgba(255, 60, 0, 0.12);
+
+  color-scheme: dark;
+  --text: #a89f96;
+  --text-h: #f7f2e9;
+  --bg: #0a0f1a;
+  --border: #1e2030;
+  --code-bg: #13161f;
+  --accent: #ff6b40;
+  --accent-bg: rgba(255, 107, 64, 0.12);
+  --accent-border: rgba(255, 107, 64, 0.45);
+  --social-bg: rgba(30, 32, 48, 0.6);
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+}
+
+/* ── System dark preference (only if no data-theme override is applied) ── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --text: #a89f96;
+    --text-h: #f7f2e9;
+    --bg: #0a0f1a;
+    --border: #1e2030;
+    --code-bg: #13161f;
+    --accent: #ff6b40;
+    --accent-bg: rgba(255, 107, 64, 0.12);
+    --accent-border: rgba(255, 107, 64, 0.45);
+    --social-bg: rgba(30, 32, 48, 0.6);
+    --theme-bg: #0a0f1a;
+    --theme-bg-alt: #0d1220;
+    --theme-card: rgba(255,255,255,0.03);
+    --theme-card-strong: rgba(255,255,255,0.06);
+    --theme-border: rgba(255,255,255,0.08);
+    --theme-border-mid: rgba(255,255,255,0.13);
+    --theme-text: #e8e4d9;
+    --theme-text-muted: rgba(232,228,217,0.65);
+    --theme-text-faint: rgba(232,228,217,0.35);
+    --theme-accent: #ff3c00;
+    --theme-accent-2: #0078dc;
+    --scroll-btn-bg: rgba(8, 12, 23, 0.85);
+    --scroll-btn-hover: rgba(255, 60, 0, 0.12);
+  }
+}
+
+/* ── Base ─────────────────────────────────────── */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--theme-bg);
+  color: var(--theme-text);
+  overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Reveal animation ─────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: reveal 0.7s ease forwards;
+}
+.reveal-delay-1 { animation-delay: 0.1s; }
+.reveal-delay-2 { animation-delay: 0.2s; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Typography ───────────────────────────────── */
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+}
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p { margin: 0; }
+
+/* ── Code ─────────────────────────────────────── */
+code, .counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+/* ── Scroll-to-top button ─────────────────────── */
+.scroll-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid var(--theme-border-mid);
+  border-radius: 999px;
+  background: var(--scroll-btn-bg);
+  color: var(--theme-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(43, 38, 32, 0.12);
+  cursor: pointer;
+  z-index: 40;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.scroll-top-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(194, 57, 12, 0.45);
+  background: var(--scroll-btn-hover);
+  color: var(--theme-accent);
+}
+.scroll-top-btn:focus-visible {
+  outline: 2px solid var(--theme-accent);
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .scroll-top-btn {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
