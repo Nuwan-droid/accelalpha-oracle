@@ -170,10 +170,6 @@ def format_session_for_display(session):
             f"Description: {session['description']}"
         )
 
-    if session.get("score") is not None:
-        lines.append(
-            f"Match Score: {session['score']}"
-        )
 
     return "\n".join(lines)
 
@@ -207,7 +203,6 @@ async def match_session(data: UserInput):
     email_draft = generate_invitation(
         name=data.name,
         email=data.email,
-        focus=data.focus,
         matched_session=matched_session
     )
 
@@ -222,7 +217,6 @@ async def match_session(data: UserInput):
         "visitor": {
             "name": data.name,
             "email": data.email,
-            "focus": data.focus
         },
         "matched_session": matched_session_text,
         "matched_session_details": matched_session,

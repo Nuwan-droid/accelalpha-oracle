@@ -168,6 +168,34 @@ export default function ResultView({ data }) {
           }
 
         }
+
+        @media (max-width: 520px) {
+          .rv-root {
+            padding: 40px 16px;
+          }
+
+          .rv-title {
+            font-size: clamp(32px, 10vw, 44px);
+            margin-bottom: 28px;
+          }
+
+          .rv-card {
+            border-radius: 12px;
+          }
+
+          .rv-session {
+            padding: 20px;
+          }
+
+          .rv-email-header {
+            padding: 14px 18px;
+          }
+
+          .rv-log {
+            margin: 14px 16px 18px;
+            font-size: 11px;
+          }
+        }
       `}</style>
 
       <section

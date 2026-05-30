@@ -604,6 +604,72 @@ export default function HeroSection({ theme, onToggleTheme }) {
     animation: hero-float 6s ease-in-out infinite;
   }
 
+  @media (max-width: 1024px) {
+    .hero-nav {
+      padding: 16px 28px;
+    }
+
+    .hero-nav::after {
+      left: 28px;
+      right: 28px;
+    }
+
+    .hero-copy {
+      margin: 56px 32px 28px;
+    }
+
+    .hero-meta {
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .hero-meta-item {
+      font-size: 13px;
+    }
+
+    .hero-meta-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-nav {
+      padding: 14px 20px;
+    }
+
+    .hero-nav-logo img,
+    .partner-logo img {
+      height: 34px;
+    }
+
+    .hero-copy {
+      margin: 40px 20px 24px;
+    }
+
+    .hero-body {
+      padding-top: 96px;
+    }
+
+    .hero-meta {
+      gap: 16px;
+    }
+
+    .hero-countdown-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-countdown {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .countdown-unit {
+      min-width: 68px;
+    }
+  }
+
   @media (max-width: 640px) {
     .hero-nav {
       padding: 14px 16px;
@@ -627,6 +693,10 @@ export default function HeroSection({ theme, onToggleTheme }) {
       margin: 28px 16px 20px;
       max-width: none;
       padding: 0;
+    }
+
+    .hero-body {
+      padding-top: 124px;
     }
 
     .hero-tag {

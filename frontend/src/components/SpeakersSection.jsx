@@ -175,6 +175,32 @@ export default function SpeakersSection() {
           color: #d62020;
         }
 
+        @media (max-width: 820px) {
+          .speakers-grid {
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+          }
+        }
+
+        @media (max-width: 520px) {
+          .speakers-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+          }
+
+          .speaker-avatar {
+            width: clamp(120px, 38vw, 150px);
+            border-width: 7px;
+          }
+
+          .speaker-name {
+            font-size: 16px;
+          }
+
+          .speaker-role {
+            font-size: 12px;
+          }
+        }
+
         @media (max-width: 640px) {
           .speaker-avatar {
             border-width: 8px;

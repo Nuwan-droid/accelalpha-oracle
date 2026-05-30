@@ -430,6 +430,59 @@ export default function AgendaSection() {
           .ag-title { font-size: clamp(36px, 10vw, 52px); }
         }
 
+        @media (max-width: 520px) {
+          .ag-row {
+            grid-template-columns: 1fr;
+          }
+
+          .ag-time-col {
+            text-align: left;
+            padding-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+          }
+
+          .ag-row:not(:last-child) .ag-time-col::after {
+            display: none;
+          }
+
+          .ag-time-dot {
+            margin: 0;
+          }
+
+          .ag-card {
+            padding: 16px 18px;
+          }
+
+          .ag-card-top {
+            align-items: flex-start;
+            gap: 10px;
+          }
+
+          .ag-card-right {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+          }
+
+          .ag-session-title {
+            white-space: normal;
+          }
+
+          .ag-desc {
+            padding: 12px 0 2px 0;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .ag-tag {
+            font-size: 8px;
+            padding: 2px 7px;
+          }
+        }
+
         @media (max-width: 900px) {
           .ag-header {
             flex-direction: column;

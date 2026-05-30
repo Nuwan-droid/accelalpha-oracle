@@ -179,6 +179,25 @@ export default function InterestForm({ onSubmit, loading }) {
             width: 100%;
           }
         }
+
+        @media (max-width: 480px) {
+          .interest-title {
+            font-size: clamp(30px, 10vw, 40px);
+          }
+
+          .interest-sub {
+            font-size: 13px;
+          }
+
+          .interest-field {
+            padding: 12px 14px;
+            font-size: 13px;
+          }
+
+          .interest-btn {
+            padding: 12px 20px;
+          }
+        }
       `}</style>
 
       <section
