@@ -17,10 +17,18 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
+    allow_credentials=True,
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+@app.get("/")
+async def root():
+    return {
+        "message": "Welcome to the Conference Matcher API!"
+    }
+
 
 AGENDA_PATH = os.path.join(
     os.path.dirname(__file__),
@@ -168,13 +176,6 @@ def format_session_for_display(session):
         )
 
     return "\n".join(lines)
-
-
-@app.get("/")
-async def root():
-    return {
-        "message": "Welcome to the Conference Matcher API!"
-    }
 
 
 @app.get("/sessions")

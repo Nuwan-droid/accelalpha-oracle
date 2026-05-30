@@ -5,13 +5,13 @@ export default function InterestForm({ onSubmit, loading }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    focus: ""
+    focus: "",
   });
 
   const handleChange = (e) => {
     setForm({
       ...form,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -26,8 +26,7 @@ export default function InterestForm({ onSubmit, loading }) {
       return;
     }
 
-    const emailRegex =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(form.email)) {
       alert("Please enter a valid email address");
@@ -35,9 +34,7 @@ export default function InterestForm({ onSubmit, loading }) {
     }
 
     if (!form.focus.trim()) {
-      alert(
-        "Please describe your professional focus or career challenges"
-      );
+      alert("Please describe your professional focus or career challenges");
       return;
     }
 
@@ -195,10 +192,7 @@ export default function InterestForm({ onSubmit, loading }) {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
         >
-
-          <h2 className="interest-title">
-            Find Your Perfect Session
-          </h2>
+          <h2 className="interest-title">Find Your Perfect Session</h2>
 
           <input
             className="interest-field"
@@ -237,9 +231,6 @@ export default function InterestForm({ onSubmit, loading }) {
                 : "Get Personalized Invitation →"}
             </button>
           </div>
-
-        
-
         </motion.div>
       </section>
     </>

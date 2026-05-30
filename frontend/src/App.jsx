@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";about:blank#blocked
 import axios from "axios";
 import { ArrowUp } from "lucide-react";
 
@@ -8,7 +8,7 @@ import AgendaSection from "./components/AgendaSection";
 import InterestForm from "./components/InterestForm";
 import ResultView from "./components/ResultView";
 
-const API_URL = "https://accelalpha-oracle.onrender.com/match";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
@@ -37,9 +37,7 @@ export default function App() {
   }, []);
 
   const toggleTheme = () => {
-    setTheme((current) =>
-      current === "dark" ? "light" : "dark"
-    );
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
   };
 
   const handleSubmit = async (formData) => {
@@ -47,20 +45,15 @@ export default function App() {
       setLoading(true);
       setResult(null);
 
-      const response = await axios.post(
-        API_URL,
-        formData
-      );
+      const response = await axios.post(`${API_BASE}/match`, formData);
 
       setResult(response.data);
 
       setTimeout(() => {
-        document
-          .getElementById("result")
-          ?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
+        document.getElementById("result")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       }, 200);
     } catch (err) {
       console.error(err);
@@ -75,12 +68,10 @@ export default function App() {
       });
 
       setTimeout(() => {
-        document
-          .getElementById("result")
-          ?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
+        document.getElementById("result")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       }, 200);
     } finally {
       setLoading(false);
@@ -89,19 +80,13 @@ export default function App() {
 
   return (
     <div>
-      <HeroSection
-        theme={theme}
-        onToggleTheme={toggleTheme}
-      />
+      <HeroSection theme={theme} onToggleTheme={toggleTheme} />
 
       <SpeakersSection />
 
       <AgendaSection />
 
-      <InterestForm
-        onSubmit={handleSubmit}
-        loading={loading}
-      />
+      <InterestForm onSubmit={handleSubmit} loading={loading} />
 
       <ResultView data={result} />
 

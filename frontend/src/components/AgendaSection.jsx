@@ -15,7 +15,8 @@ import {
   Loader2,
 } from "lucide-react";
 
-const SESSIONS_API = "http://localhost:8000/sessions";
+const API_BASE = (import.meta.env.VITE_API_URL); 
+const SESSIONS_API = `${API_BASE}/sessions`;
 
 const TAG_CONFIG = {
   "Check-in": {
