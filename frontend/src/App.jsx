@@ -8,7 +8,7 @@ import AgendaSection from "./components/AgendaSection";
 import InterestForm from "./components/InterestForm";
 import ResultView from "./components/ResultView";
 
-const API_URL = "http://localhost:8000/match";
+const API_URL = "https://accelalpha-oracle.onrender.com/match";
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
