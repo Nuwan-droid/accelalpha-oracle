@@ -80,7 +80,7 @@
   gap: 10px;
   width: 100%;
   min-width: 0;
- overflow: hidden;
+  overflow: hidden;
 }
 
 /* Tag pill strip (mobile: single-row horizontal scroll) */
@@ -348,7 +348,6 @@
 
 /* Small Mobile */
 @media (max-width: 767px) {
-
   .ag-header {
     align-items: center;
     text-align: center;

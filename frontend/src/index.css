@@ -21,8 +21,8 @@
   --theme-bg-alt:       #faf6ee;
   --theme-card:         rgba(255, 255, 255, 0.85);
   --theme-card-strong:  rgba(255, 255, 255, 1);
-  --theme-border:       rgba(43, 38, 32, 0.1);
-  --theme-border-mid:   rgba(43, 38, 32, 0.16);
+  --theme-border:       rgba(6, 3, 3, 0.973);
+  --theme-border-mid:   rgba(0, 0, 0, 0.987);
   --theme-text:         #050403;
   --theme-text-muted:   rgba(43, 38, 32, 0.6);
   --theme-text-faint:   rgba(43, 38, 32, 0.38);
@@ -57,8 +57,8 @@
   --theme-bg-alt:       #0d1220;
   --theme-card:         rgba(255, 255, 255, 0.03);
   --theme-card-strong:  rgba(255, 255, 255, 0.06);
-  --theme-border:       rgba(255, 255, 255, 0.08);
-  --theme-border-mid:   rgba(255, 255, 255, 0.13);
+  --theme-border:       rgba(241, 232, 232, 0.908);
+  --theme-border-mid:   rgba(237, 230, 230, 0.966);
   --theme-text:         #e8e4d9;
   --theme-text-muted:   rgba(232, 228, 217, 0.65);
   --theme-text-faint:   rgba(232, 228, 217, 0.35);
