@@ -203,6 +203,7 @@ async def match_session(data: UserInput):
     email_draft = generate_invitation(
         name=data.name,
         email=data.email,
+        focus=data.focus,
         matched_session=matched_session
     )
 
