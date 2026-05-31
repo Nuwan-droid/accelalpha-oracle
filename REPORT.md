@@ -118,14 +118,16 @@ OPENROUTER_API_KEY=api_key
 
 ---
 
+ 
 ## Content Creation Check
-
+ 
 ### LinkedIn Promotional Post
-
+ 
 > Corporate events generate the greatest value when every attendee is connected with the sessions most relevant to their professional goals. Our AI-powered Event Matching & Invitation System automatically analyzes attendee interests, recommends the best-fit conference sessions, and generates personalized invitation emails in seconds.
-
-![LinkedIn Post 1](frontend/src/assets/post/image1.PNG)
-![LinkedIn Post 2](frontend/src/assets/post/image2.PNG)
+ 
+| | |
+|---|---|
+| ![LinkedIn Post 1](frontend/src/assets/post/image1.PNG) | ![LinkedIn Post 2](frontend/src/assets/post/image2.PNG) |
 
 ---
 
