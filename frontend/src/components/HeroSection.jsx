@@ -4,7 +4,7 @@ import accelalphaLogo from "../assets/logo.png";
 import oraclePartnerLogo from "../assets/oracle-partner.png";
 import shipSlideOne from "../assets/oracle-ship-1.jpg";
 import shipSlideTwo from "../assets/oracle-ship-2.jpg";
-import "../styles/heroSection.css";
+import "../styles/herosection.css";
 
 const TARGET_DATE = new Date("2026-11-13T09:30:00");
 
