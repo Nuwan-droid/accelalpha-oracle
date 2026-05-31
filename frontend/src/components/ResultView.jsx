@@ -22,7 +22,7 @@ export default function ResultView({ data }) {
         }
 
         .rv-eyebrow{
-          font-size:11px;
+          font-size:25px;
           text-transform:uppercase;
           letter-spacing:.16em;
           color:var(--theme-success);
@@ -148,7 +148,7 @@ export default function ResultView({ data }) {
           margin-top:16px;
           border-radius:6px;
         }
-
+    
         @media(max-width:768px){
           .rv-root{
             padding:48px 20px;
@@ -235,9 +235,6 @@ export default function ResultView({ data }) {
               Match Found
             </p>
 
-            <h6 className="rv-title">
-              Matching Session | Personalized Invitation 
-            </h6>
 
             <div className="rv-grid">
 

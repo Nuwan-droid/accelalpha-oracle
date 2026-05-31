@@ -23,7 +23,7 @@
   --theme-card-strong:  rgba(255, 255, 255, 1);
   --theme-border:       rgba(43, 38, 32, 0.1);
   --theme-border-mid:   rgba(43, 38, 32, 0.16);
-  --theme-text:         #2b2620;
+  --theme-text:         #050403;
   --theme-text-muted:   rgba(43, 38, 32, 0.6);
   --theme-text-faint:   rgba(43, 38, 32, 0.38);
   --theme-accent:       #c2390c;
@@ -51,7 +51,7 @@
   }
 }
 
-/* ── Optional dark override (keep only if you need dark mode elsewhere) ── */
+/* ── Optional dark override ── */
 [data-theme="dark"] {
   --theme-bg:           #0a0f1a;
   --theme-bg-alt:       #0d1220;

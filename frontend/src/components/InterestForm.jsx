@@ -163,7 +163,7 @@ export default function InterestForm({ onSubmit, loading }) {
           color: var(--theme-text-faint);
           line-height: 1.6;
         }
-
+     
         @media (max-width: 640px) {
           .interest-wrap {
             padding: 22px;
